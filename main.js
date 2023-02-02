@@ -1,13 +1,19 @@
-function tocaSons(){
-    const listaSons = document.querySelectorAll('#som');
+function tocaSons (){
+    const listaSons = document.querySelectorAll('.som');
+    let contador = 0;
 
-    for (i=0;i<9;i++){
-        listaSons[i].play();
-    }
+    listaSons.forEach(listaSom => {
+        listaSons[contador].play();
+
+        contador++;
+    });
 }
 
-const listaDeTeclas = document.querySelectorAll('.tecla');
+const listaTeclas = document.querySelectorAll('.tecla');
+let contador = 0;
 
-for (i=0;i<9;i++){
-    listaDeTeclas[i].onclick = tocaSons;
+while (contador < 9){
+    listaTeclas[contador].onclick = tocaSons;
+
+    contador++;
 }
